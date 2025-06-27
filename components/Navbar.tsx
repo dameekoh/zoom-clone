@@ -13,7 +13,7 @@ const Navbar = () => {
           alt="zoom"
           width={32}
           height={32}
-          className="max-sm:size-10"
+          className="max-sm:hidden"
         />
         <p className="text-[26px] font-extrabold text-white max-sm:hidden">
           Yoom
