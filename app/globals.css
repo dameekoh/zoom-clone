@@ -49,7 +49,6 @@
   --color-sky-1: #c9ddff;
   --color-sky-2: #ecf0ff;
   --color-sky-3: #f5fcff;
-  /* rewrite */
   --color-orange-1: #ff742e;
   --color-purple-1: #830ef9;
   --color-yellow-1: #f9a90e;
@@ -122,6 +121,16 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
 }
 
 @layer base {
