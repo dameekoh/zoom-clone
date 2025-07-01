@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/sonner";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -43,6 +45,7 @@ export default function RootLayout({
           className={`${geistSans.variable} bg-dark-2 ${geistMono.variable} antialiased`}
         >
           {children}
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
