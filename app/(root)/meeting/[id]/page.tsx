@@ -5,14 +5,15 @@ import { useUser } from "@clerk/nextjs";
 import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
 import { useParams } from "next/navigation";
 import { Loader } from "lucide-react";
+import { use } from "react";
 
 import { useGetCallById } from "@/hooks/useGetCallById";
-import Alert from "@/components/Alert";
+import { Alert } from "@/components/ui/alert";
 import MeetingSetup from "@/components/MeetingSetup";
 import MeetingRoom from "@/components/MeetingRoom";
 
-const MeetingPage = () => {
-  const { id } = useParams();
+const MeetingPage = ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = use(params);
   const { isLoaded, user } = useUser();
   const { call, isCallLoading } = useGetCallById(id);
   const [isSetupComplete, setIsSetupComplete] = useState(false);
