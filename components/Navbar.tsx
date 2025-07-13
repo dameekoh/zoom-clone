@@ -3,14 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 import MobileNav from "@/components/MobileNav";
-import {
-  ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
